@@ -1,7 +1,7 @@
 name: Hellow World
 
 on:
-  - workflow_dispatch: 
+  workflow_dispatch: 
 
 jobs:
   hello-bash:
