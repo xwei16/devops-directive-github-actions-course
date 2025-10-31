@@ -12,5 +12,5 @@ jobs:
   hello-python:
     runs-on: ubuntu-22.04
     steps:
-      - run: echo "Hello World python"
+      - run: print("Hello World python")
         shell: python
