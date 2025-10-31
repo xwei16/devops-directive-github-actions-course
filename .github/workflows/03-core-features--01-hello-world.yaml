@@ -1,4 +1,4 @@
-name: Hellow World
+name: Hello World
 
 on:
   workflow_dispatch: 
@@ -7,4 +7,10 @@ jobs:
   hello-bash:
     runs-on: ubuntu-22.04
     steps:
-      - run: echo "Hello World"
+      - run: echo "Hello World bash"
+  
+  hello-python:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo "Hello World python"
+        shell: python
