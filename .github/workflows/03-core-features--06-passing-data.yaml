@@ -6,7 +6,7 @@ jobs:
   producer:
     runs-on: ubuntu-24.04
 
-    outputs:
+    outputs: # reference as output of the job - inter-job communication
       foo: ${{ steps.generate-foo.outputs.foo }}
     steps:
       - name: Generate and export foo
@@ -22,7 +22,7 @@ jobs:
 
       - name: Inspect values inside producer
         run: |
-          echo "FOO (set via GITHUB_ENV):   $FOO"
+          echo "FOO (set via GITHUB_ENV - within a job):   $FOO"
           echo "foo (step output):          ${{ steps.generate-foo.outputs.foo }}"
 
   consumer:
